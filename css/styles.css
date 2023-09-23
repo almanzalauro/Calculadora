@@ -1,0 +1,108 @@
+@keyframes btn-action {
+  to {
+    transform: scale(1);
+  }
+  from {
+    transform: scale(1.05);
+  }
+}
+html, body {
+  height: 100%;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 500%;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  animation: btn-action;
+  animation-duration: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  background: #10131c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  background: #212532;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  width: 325px;
+  border: 1px solid #333;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.calculator .screen {
+  grid-column: 1/5;
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  height: 6rem;
+  color: #fff;
+  background: #333849;
+  text-align: end;
+  padding: 0.5rem;
+}
+.calculator .screen::placeholder {
+  color: #fff;
+}
+.calculator .symbol, .calculator .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 1;
+  font-size: 1.25rem;
+  color: #fff;
+  transition: 0.15s ease;
+}
+.calculator .symbol {
+  background: #4852c1;
+}
+.calculator .symbol:hover {
+  background: #3f49b5;
+}
+.calculator .number {
+  background: #333849;
+}
+.calculator .number:hover {
+  background: rgba(51, 57, 72, 0.6745098039);
+}
+
+/*# sourceMappingURL=styles.css.map */
